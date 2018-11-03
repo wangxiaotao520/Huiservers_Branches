@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:clipToPadding="false"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <include layout="@layout/titlebar_center"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/lin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/margin"
+                        android:src="@drawable/phone_new"/>
+
+                    <EditText
+                        android:id="@+id/edt_phone"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="@dimen/margin"
+                        android:layout_weight="9"
+                        android:background="@null"
+                        android:ellipsize="end"
+                        android:hint="物业预留手机号"
+                        android:textCursorDrawable="@drawable/color_cursor"
+                        android:singleLine="true"
+                        android:textColor="@color/c_title"
+                        android:textColorHint="@color/gray4"
+                        android:textSize="@dimen/t_14sp"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/view_background"/>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/margin"
+                        android:src="@drawable/keynew"/>
+
+                    <EditText
+                        android:id="@+id/edt_code"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="@dimen/margin"
+                        android:layout_weight="9"
+                        android:background="@null"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:hint="六位验证码"
+                        android:singleLine="true"
+                        android:textCursorDrawable="@drawable/color_cursor"
+                        android:textColor="@color/c_title"
+                        android:textColorHint="@color/gray4"
+                        android:textSize="@dimen/t_14sp"/>
+
+                    <TextView
+                        android:id="@+id/txt_getcode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/allshape_zorange_k_20"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/margin"
+                        android:paddingLeft="@dimen/margin_20"
+                        android:paddingRight="@dimen/margin_20"
+                        android:paddingTop="@dimen/margin"
+                        android:text="获取验证"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/t_16sp"
+                        />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/view_background"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_15"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:background="@drawable/icon_invite_quanxian"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="若在物业预留的电话号码发成变化"
+                        android:textColor="#4d000000"
+                        android:textSize="@dimen/t_14sp"/>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_15"
+                    android:layout_marginTop="2dp"
+                    android:text="请在物业办公室进行更改后，在进行业主认证"
+                    android:textColor="#4d000000"
+                    android:textSize="@dimen/t_14sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/icon_invite_quanxian"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="如果您不是业主，请联系业主邀请您加入房屋"
+                    android:textColor="#4d000000"
+                    android:textSize="@dimen/t_14sp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/orange5"
+            android:gravity="center"
+            android:text="下一步"
+            android:textColor="@color/white"
+            android:textSize="@dimen/t_18sp"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

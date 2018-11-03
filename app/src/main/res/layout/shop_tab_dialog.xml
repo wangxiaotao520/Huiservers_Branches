@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+    <com.zhy.android.percent.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@android:color/transparent"
+        app:layout_heightPercent="50%sh">
+
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@android:color/white"
+            app:layout_heightPercent="75%sh"
+            app:layout_marginTopPercent="2%sh">
+
+
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="18dp"
+                android:text="维修类目"
+                android:textSize="@dimen/t_18sp"
+                android:textColor="@color/c_title12"
+                 />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/tv_title"
+                android:background="@color/view_background_color"
+                app:layout_marginBottomPercent="2%sh"
+                app:layout_marginTopPercent="2%sh" />
+
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            app:layout_marginLeftPercent="2%sw"
+            app:layout_marginRightPercent="2%sw">
+
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.zhy.android.percent.support.PercentRelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin"
+                    android:layout_marginRight="@dimen/margin">
+
+                    <ImageView
+                        android:id="@+id/iv_drop"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginRight="3dp"
+                        android:background="@drawable/drop1" />
+
+                    <TextView
+                        android:id="@+id/color_label"
+                        android:layout_width="wrap_content"
+                        android:layout_toRightOf="@id/iv_drop"
+                        android:layout_height="wrap_content"
+                        android:text="请选择以下维修类目"
+                        android:textColor="@color/c_title4"
+                        android:textSize="@dimen/t_12sp"
+                        />
+
+
+                    <com.huacheng.huiservers.dialog.tabGround.TagContainerLayout
+                        android:id="@+id/color_tag_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/color_label"
+                        app:container_background_color="#ffffff"
+                        app:container_border_color="#00000000"
+                        app:container_border_radius="0dp"
+                        app:horizontal_interval="10dp"
+                        app:layout_marginBottomPercent="17%sh"
+                        app:layout_marginTopPercent="2%sh"
+                        app:tag_border_color="#D0D0D0"
+                        app:tag_clickable="true"
+                        app:tag_corner_radius="30dp"
+                        app:tag_horizontal_padding="25dp"
+
+                        app:tag_max_length="18"
+                        android:textSize="@dimen/t_14sp"
+                        app:tag_vertical_padding="10dp"
+                        app:vertical_interval="10dp" />
+
+                </com.zhy.android.percent.support.PercentRelativeLayout>
+
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+        </ScrollView>
+
+
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+</com.zhy.android.percent.support.PercentRelativeLayout>

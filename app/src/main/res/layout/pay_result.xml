@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:clipToPadding="false"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <include layout="@layout/titlebar_center"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/margin"
+            android:background="@drawable/allshape_zorange_k_20"
+            android:text="确定"
+            android:visibility="gone"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/t_18sp"/>
+
+        <TextView
+            android:id="@+id/txt_result"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btn"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="11dp"
+            android:gravity="center"
+            android:padding="@dimen/margin_20"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="@dimen/t_18sp"/>
+    </RelativeLayout>
+</LinearLayout>

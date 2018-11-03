@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:backgroundTint="#a3a3a3"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar_center"/>
+
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_margin="17dp"
+        android:background="#fff"
+        android:gravity="top"
+        android:paddingTop="20dp"
+        android:paddingLeft="11dp"
+        android:paddingRight="11dp"
+        android:textColor="@color/text_color"
+        android:textColorHint="@color/text_color_hint"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:hint="告诉我们您的建议..."
+        android:textSize="@dimen/t_14sp" />
+
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:background="@drawable/icon_invite_quanxian"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="您可以致电客服中心:400-6535-355"
+            android:textColor="#4d000000"
+            android:textSize="@dimen/t_14sp"/>
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_alignParentBottom="true"
+            android:id="@+id/rel_ti"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/margin_13"
+                android:text="提交"
+                android:background="#ff6a24"
+                android:textSize="@dimen/t_14sp"
+                android:textColor="#fff"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

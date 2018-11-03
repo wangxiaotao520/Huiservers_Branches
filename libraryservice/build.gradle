@@ -1,0 +1,57 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "28.0.0"
+
+
+    defaultConfig {
+     //   applicationId "com.huacheng.libraryservice"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    api 'com.android.support:appcompat-v7:26.1.0'
+    api 'com.android.support.constraint:constraint-layout:1.1.2'
+    api 'junit:junit:4.12'
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:3.0.1', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    api files('libs/eventbus-3.0.0.jar')
+    api files('libs/gson-2.2.4.jar')
+    api files('libs/glide-3.7.0.jar')
+    api files('libs/TypeBuilder-1.0.jar')
+    api 'com.android.support:design:26.1.0'
+    api 'org.xutils:xutils:3.5.0'
+    api 'com.android.support:cardview-v7:26.1.0'
+    //fresco图片库
+    //fresco加载gif
+    api 'com.facebook.fresco:animated-gif:1.9.0'
+    api 'com.facebook.fresco:fresco:1.9.0'
+    api 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-7'
+    api 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-7'
+    api files('libs/org.apache.http.legacy.jar')
+    api 'com.squareup.okhttp3:okhttp:3.2.0'
+    api 'com.squareup.okio:okio:1.12.0'
+    api project(':header_viewpager')
+    api 'com.hyman:flowlayout-lib:1.1.2'
+    //星星评价
+    api 'com.xingliuhua:xlhratingbar_lib:1.0.1'
+
+}

@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/all_gray"
+              android:orientation="vertical"
+    >
+
+    <include layout="@layout/titlebar_center"></include>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/all_gray">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="45dp">
+
+            <ScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="45dp"
+                    android:layout_marginLeft="@dimen/margin_15"
+                    android:layout_marginRight="@dimen/margin_15"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/margin_20"
+                        android:paddingTop="@dimen/margin_20"
+                        android:text="缴费金额"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/t_14sp"/>
+
+
+                    <com.huacheng.huiservers.view.ClearEditText
+                        android:id="@+id/cet_inputPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:hint="输入金额"
+                        android:inputType="numberDecimal"
+                        android:textCursorDrawable="@drawable/color_cursor"
+                        android:paddingBottom="13dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="13dp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/t_16sp">
+
+                    </com.huacheng.huiservers.view.ClearEditText>
+
+                    <LinearLayout
+                        android:id="@+id/lin_payItem"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/margin_20"
+                            android:paddingTop="@dimen/margin_20"
+                            android:text="请选择缴费项目"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/t_14sp"/>
+
+                        <RelativeLayout
+                            android:id="@+id/rel_PayItem"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <Spinner
+                                android:id="@+id/spinnerPayItem"
+                                android:layout_width="match_parent"
+                                android:layout_height="45dp"
+                                android:background="@color/white"
+                                android:overlapAnchor="false"
+                                android:spinnerMode="dropdown"/>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="10dp"
+                                android:src="@drawable/ic_dropdown"/>
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lin_shops"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/margin_20"
+                            android:paddingTop="@dimen/margin_20"
+                            android:text="请选择您的商铺"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/t_14sp"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/tv_shops"
+                                android:layout_width="match_parent"
+                                android:layout_height="45dp"
+                                android:background="@color/white"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/t_16sp"/>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="10dp"
+                                android:src="@drawable/ic_dropdown"/>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lin_yourHouse"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/margin_20"
+                            android:paddingTop="@dimen/margin_20"
+                            android:text="请选择您的房屋"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/t_14sp"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/tv_yourHouse"
+                                android:layout_width="match_parent"
+                                android:layout_height="45dp"
+                                android:background="@color/white"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/t_16sp"/>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="10dp"
+                                android:src="@drawable/ic_dropdown"/>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lin_checkInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/margin_20"
+                            android:paddingTop="@dimen/margin_20"
+                            android:text="请确定您的信息"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/t_14sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_checkInfo"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:background="@color/white"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:spinnerMode="dropdown"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/t_16sp"/>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/lin_facepay_note"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/margin_20"
+                            android:paddingTop="@dimen/margin_20"
+                            android:text="备注"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/t_14sp"/>
+
+                        <!--1、android:lineSpacingExtra
+                    设置行间距，如”8dp”。
+
+                              android:lineSpacingMultiplier="1.2"
+                        android:lineSpacingExtra="10dp"
+
+                    2、android:lineSpacingMultiplier
+                    设置行间距的倍数，如”1.5″。-->
+
+
+                        <EditText
+                            android:id="@+id/et_facepay_note"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="25dp"
+                            android:background="@color/white"
+                            android:ellipsize="end"
+                            android:gravity="top"
+                            android:lineSpacingExtra="5dp"
+                            android:lineSpacingMultiplier="1.0"
+                            android:maxLines="10"
+                            android:minLines="8"
+                            android:padding="10dp"
+                            android:scrollbars="vertical"
+                            android:textCursorDrawable="@drawable/color_cursor"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/t_14sp"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </ScrollView>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_indexNext"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/orange5"
+            android:gravity="center"
+            android:text="下一步"
+            android:textColor="@color/white"
+            android:textSize="@dimen/t_16sp"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

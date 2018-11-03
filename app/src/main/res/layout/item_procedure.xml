@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="0px"
+    app:cardMaxElevation="2px"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true"
+    >
+
+    <LinearLayout
+        android:background="#4173c8"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.huacheng.huiservers.view.CircularImage
+            android:id="@+id/img_info"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+             />
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/c_title"
+                android:textSize="@dimen/t_14sp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="关于迎宾小区通知"/>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/t_12sp"
+                android:textColor="#fff"
+                android:text="天使爱美丽"/>
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/t_12sp"
+                android:textColor="#fff"
+                android:text="关于迎宾小区通知"/>
+        </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#adbde5"/>
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_margin="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:textSize="@dimen/t_12sp"
+        android:textColor="#fff"
+        android:text="社会认识分歧比较大，有的人认为的精华，有的人觉得是糟粕，官方也有矛盾的说法，自己把握好了，不要求能说服别人，主要是自己相信社会认识分歧比较大，有的人认为的精华，有的人觉得是糟粕，官方也有矛盾的说法，自己把握好了，不要求能说服别人，主要是自己相信"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <TextView
+            android:id="@+id/tv_r_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:text="185人讨论"
+            android:textSize="@dimen/t_12sp"
+            android:textColor="#adbde5"/>
+        
+    </RelativeLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

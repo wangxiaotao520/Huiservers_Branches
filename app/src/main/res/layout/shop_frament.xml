@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/all_gray"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+    <com.huacheng.huiservers.view.VpSwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="55dp"
+        android:scrollbars="vertical">
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/all_gray"
+                    android:orientation="vertical"
+                    app:layout_scrollFlags="scroll">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <!--<com.huacheng.huiservers.view.ImageCycleView-->
+                        <!--android:id="@+id/ad_view"-->
+                        <!--android:layout_width="fill_parent"-->
+                        <!--android:layout_height="wrap_content" />-->
+
+                        <!--<TextView-->
+                        <!--android:id="@+id/tv_zhanwei"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="48dp"-->
+                        <!--android:visibility="gone" />-->
+                        <com.huacheng.libraryservice.widget.FunctionAdvertise
+                            android:id="@+id/fc_ads"
+                            android:layout_width="match_parent"
+                            android:layout_height="180dp"
+                            android:background="@color/windowbackground" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/allshape_white"
+                        android:orientation="vertical"
+                        android:padding="@dimen/margin_5">
+
+                        <com.huacheng.huiservers.view.MyGridview
+                            android:id="@+id/my_grid_cate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center_horizontal"
+                            android:numColumns="5"
+                            android:stretchMode="columnWidth" />
+                    </LinearLayout>
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/viewPager_cate"
+                        android:layout_width="match_parent"
+                        android:layout_height="143dp"
+                        android:clipToPadding="false"
+                        android:overScrollMode="never"
+                        android:paddingLeft="@dimen/card_padding"
+                        android:paddingRight="@dimen/card_padding"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tv_zhanwei2"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:background="@color/all_gray"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lin_shop_limit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin"
+                    android:layout_marginBottom="@dimen/margin"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_limit_banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_discount_more"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:padding="@dimen/margin"
+                            android:text="更多>>"
+                            android:textColor="@color/colorPrimary"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+
+                    <HorizontalScrollView
+                        android:id="@+id/horizontalSV"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/margin_8"
+                        android:nestedScrollingEnabled="false"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="230dp">
+
+                            <GridView
+                                android:id="@+id/gridview_horizontal_list"
+                                android:layout_width="fill_parent"
+                                android:layout_height="100dp"
+                                android:gravity="center"
+                                android:numColumns="auto_fit"></GridView>
+
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                </LinearLayout>
+
+
+                <HorizontalScrollView
+                    android:id="@+id/horizontal_ad_middle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/margin"
+
+                    android:layout_marginTop="@dimen/margin"
+                    android:nestedScrollingEnabled="false"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+
+                        <GridView
+                            android:id="@+id/gridview_horizontal_more1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="100dp"
+                            android:gravity="center"
+                            android:numColumns="auto_fit"></GridView>
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/lin_shop_more"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:orientation="vertical">
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/mRecyclerView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/margin_5"
+                                android:layout_marginRight="@dimen/margin_5"
+                                android:divider="@null">
+
+                            </android.support.v7.widget.RecyclerView>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </com.huacheng.huiservers.view.VpSwipeRefreshLayout>
+
+    <LinearLayout
+        android:id="@+id/ly_top"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:background="#80ffffff"
+        android:elevation="1dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/lin_cate"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/ry_cate"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icon_shop_index_cate" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_serch"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="8"
+            android:background="@drawable/allshape_gray_20"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin"
+                android:background="@drawable/shop_icon_serch" />
+
+            <TextView
+                android:id="@+id/tv_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:gravity="center"
+                android:text="搜索您想要的商品"
+                android:textSize="@dimen/t_14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lin_car"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/ry_gouwu"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/lin_gouwuche"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/icon_center_gouwu" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/txt_shop_num"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/circle"
+                        android:gravity="center"
+                        android:textSize="@dimen/t_10sp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

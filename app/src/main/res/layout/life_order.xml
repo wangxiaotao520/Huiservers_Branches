@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <include layout="@layout/titlebar_center" />
+
+    <RadioGroup
+        android:id="@+id/rg_colleague"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/radio0"
+            style="@style/client_style"
+            android:checked="true"
+            android:drawableBottom="@drawable/radio_color_blue"
+            android:text="未接单"
+            android:textColor="@drawable/btn_textcolor_bottom" />
+
+        <RadioButton
+            android:id="@+id/radio1"
+            style="@style/client_style"
+            android:drawableBottom="@drawable/radio_color_blue"
+            android:text="进行中"
+            android:textColor="@drawable/btn_textcolor_bottom" />
+
+        <RadioButton
+            android:id="@+id/radio2"
+            style="@style/client_style"
+            android:drawableBottom="@drawable/radio_color_blue"
+            android:text="已完成"
+            android:textColor="@drawable/btn_textcolor_bottom" />
+
+        <RadioButton
+            android:id="@+id/radio3"
+            style="@style/client_style"
+            android:drawableBottom="@drawable/radio_color_blue"
+            android:text="待处理"
+            android:textColor="@drawable/btn_textcolor_bottom" />
+
+        <RadioButton
+            android:id="@+id/radio4"
+            style="@style/client_style"
+            android:drawableBottom="@drawable/radio_color_blue"
+            android:text="待评价"
+            android:textColor="@drawable/btn_textcolor_bottom" />
+
+        <RadioButton
+            android:id="@+id/radio5"
+            style="@style/client_style"
+            android:drawableBottom="@drawable/radio_color_blue"
+            android:text="退款/售后"
+            android:textColor="@drawable/btn_textcolor_bottom"
+            android:visibility="gone" />
+    </RadioGroup>
+
+    <com.huacheng.huiservers.view.Zks_FL_ListView
+        android:id="@+id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+    </com.huacheng.huiservers.view.Zks_FL_ListView>
+
+    <include layout="@layout/no_data" />
+
+</LinearLayout>

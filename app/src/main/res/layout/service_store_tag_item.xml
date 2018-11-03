@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_tag"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#D9D9D9"
+    android:paddingRight="@dimen/margin_5"
+    android:paddingLeft="@dimen/margin_5"
+    android:paddingTop="@dimen/margin_2"
+    android:paddingBottom="@dimen/margin_2"
+    android:layout_marginRight="@dimen/margin_5"
+    android:layout_marginTop="@dimen/margin_5"
+    android:text="好的好的"
+    android:textColor="@color/grey96"
+    android:textSize="@dimen/t_10sp"
+    />
+

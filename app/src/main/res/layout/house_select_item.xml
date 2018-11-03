@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center">
+
+    <com.crazysunj.cardslideview.ElasticCardView
+        android:id="@+id/cardview"
+        android:layout_width="250dp"
+        android:layout_height="335dp"
+        android:layout_gravity="center"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="1dp"
+        app:cardMaxElevation="8dp"
+        app:ratio="1.4">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/lin_onclick"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2">
+
+                    <ImageView
+                        android:id="@+id/image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_house_bg"/>
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="#ffffff">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="27dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:background="@color/white"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="7dp"
+                                android:layout_height="7dp"
+                                android:layout_marginRight="8dp"
+                                android:background="@drawable/shape_small_point1"/>
+
+                            <TextView
+                                android:id="@+id/tv_house_select_address"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2号楼-3单元-1224"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/t_14sp"/>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp"></View>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:background="@color/white"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="7dp"
+                                android:layout_height="7dp"
+                                android:layout_marginRight="8dp"
+                                android:background="@drawable/shape_small_point1"/>
+
+                            <TextView
+                                android:id="@+id/tv_house_select_num"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="5人已绑定房屋"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/t_14sp"/>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.7dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="37dp"
+                        android:layout_marginLeft="28dp"
+                        android:background="@color/gray3"></View>
+
+
+                    <ImageView
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="39dp"
+                        android:layout_marginRight="15dp"
+                        android:src="@drawable/ic_arrow_right_grayblack"/>
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_xiaoqu_name"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="74dp"
+                android:background="@drawable/shape_round"
+                android:gravity="center"
+                android:maxLines="2"
+                android:text="华\t晟\n悦\t府"
+                android:textColor="@color/black"
+                ></TextView>
+        </RelativeLayout>
+
+
+    </com.crazysunj.cardslideview.ElasticCardView>
+
+
+</FrameLayout>

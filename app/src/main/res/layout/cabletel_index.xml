@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar_center"></include>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/all_gray">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="45dp">
+
+            <ScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="45dp"
+                    android:layout_marginLeft="@dimen/margin_15"
+                    android:layout_marginRight="@dimen/margin_15"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/lin_cabetelID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/margin_15"
+                            android:paddingTop="@dimen/margin_20"
+                            android:text="请输入卡号"
+                            android:textColor="@color/black_jain_87"
+                            android:textSize="@dimen/t_14sp" />
+
+
+                        <com.huacheng.huiservers.view.ClearEditText
+                            android:id="@+id/cet_cabetelID"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:hint=""
+                            android:inputType="number"
+                            android:paddingBottom="13dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="13dp"
+                            android:textColor="@color/black_jain_87"
+                            android:textCursorDrawable="@drawable/color_cursor"
+                            android:textSize="@dimen/t_16sp">
+
+                        </com.huacheng.huiservers.view.ClearEditText>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lin_cabetelName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/margin_15"
+                            android:paddingTop="@dimen/margin_20"
+                            android:text="请输入姓名"
+                            android:textColor="@color/black_jain_87"
+                            android:textSize="@dimen/t_14sp" />
+
+
+                        <com.huacheng.huiservers.view.ClearEditText
+                            android:id="@+id/cet_cabetelName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:hint=""
+                            android:paddingBottom="13dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="13dp"
+                            android:textColor="@color/black_jain_87"
+                            android:textCursorDrawable="@drawable/color_cursor"
+                            android:textSize="@dimen/t_16sp">
+
+                        </com.huacheng.huiservers.view.ClearEditText>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lin_cabetelPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/margin_15"
+                            android:paddingTop="@dimen/margin_20"
+                            android:text="请输入金额"
+                            android:textColor="@color/black_jain_87"
+                            android:textSize="@dimen/t_14sp" />
+
+
+                        <com.huacheng.huiservers.view.ClearEditText
+                            android:id="@+id/cet_cabetelPrice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:hint=""
+                            android:inputType="numberDecimal"
+                            android:paddingBottom="13dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="13dp"
+                            android:textColor="@color/black_jain_87"
+                            android:textCursorDrawable="@drawable/color_cursor"
+                            android:textSize="@dimen/t_16sp">
+
+                        </com.huacheng.huiservers.view.ClearEditText>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lin_facepay_note"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/margin_15"
+                            android:paddingTop="@dimen/margin_15"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/t_14sp" />
+
+                        <!--1、android:lineSpacingExtra
+                            设置行间距，如”8dp”。
+
+                                      android:lineSpacingMultiplier="1.2"
+                                android:lineSpacingExtra="10dp"
+
+                            2、android:lineSpacingMultiplier
+                            设置行间距的倍数，如”1.5″。-->
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:orientation="vertical"
+                            android:padding="@dimen/margin_15">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="注："
+                                android:textColor="@color/black_jain_54"
+                                android:textSize="@dimen/t_14sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                android:orientation="vertical"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="1、请正确填写信息确认无误后支付。"
+                                    android:textColor="@color/black_jain_54"
+                                    android:textSize="@dimen/t_14sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="2、支付成功后，请等待开通"
+                                    android:textColor="@color/black_jain_54"
+                                    android:textSize="@dimen/t_14sp" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </ScrollView>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_indexNext"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/orange5"
+            android:gravity="center"
+            android:text="下一步"
+            android:textColor="@color/white"
+            android:textSize="@dimen/t_16sp" />
+    </RelativeLayout>
+
+
+</LinearLayout>

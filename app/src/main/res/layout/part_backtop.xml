@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lin_backpager"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentRight="true"
+    android:layout_marginBottom="@dimen/margin_20"
+    android:layout_marginRight="@dimen/margin"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <com.huacheng.huiservers.view.ShadowLayout
+        android:id="@+id/shadow_backtop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:visibility="gone"
+        app:sl_dx="0dp"
+        app:sl_dy="0dp"
+        app:sl_shadowColor="@color/white"
+        app:sl_shadowRadius="4dp">
+
+        <ImageView
+            android:id="@+id/iv_backtop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bt_top"
+            tools:ignore="ContentDescription" />
+
+    </com.huacheng.huiservers.view.ShadowLayout>
+
+    <com.huacheng.huiservers.view.ShadowLayout
+        android:id="@+id/shadow_showpager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:visibility="gone"
+        app:sl_dx="0dp"
+        app:sl_dy="0dp"
+        app:sl_shadowColor="@color/white"
+        app:sl_shadowRadius="4dp">
+
+        <LinearLayout
+            android:id="@+id/lin_showPagerNum"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/shape_circle"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_page_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/black_jain_87"
+                android:textSize="@dimen/t_14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:layout_marginRight="@dimen/margin_5"
+
+                android:background="@color/graynew4"></View>
+
+            <TextView
+                android:id="@+id/tv_totalpage_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/black_jain_26"
+                android:textSize="@dimen/t_14sp" />
+
+        </LinearLayout>
+
+    </com.huacheng.huiservers.view.ShadowLayout>
+
+</LinearLayout>

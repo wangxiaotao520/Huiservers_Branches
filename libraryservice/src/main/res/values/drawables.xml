@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="drawable" name="transparent">#00000000</item>
+    <drawable name="widget_edit_block_bg_normal">@android:color/transparent</drawable>
+    <item type="drawable" name="transparent_background">#99000000</item>
+    <item type="drawable" name="list_background">#fff4f4f4</item>
+    <item name="history_list_nomal" type="drawable">#fafafa</item>
+    <item name="history_list_press" type="drawable">#ededed</item>
+    <item name="nav_bg" type="drawable">#1D262E</item>
+</resources>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F7F7F7"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/horizontalScrollView1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <Button
+                android:id="@+id/tv_share_app_to_weichat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="5dp"
+                android:drawableTop="@mipmap/ic_more_wechat"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="微信"
+                android:background="#F7F7F7"
+                android:textColor="#999999"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/tv_share_app_to_weichatfav"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="5dp"
+                android:drawableTop="@mipmap/ic_more_wecircle"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="朋友圈"
+                android:background="#F7F7F7"
+                android:textColor="#999999"
+                android:textSize="14sp" />
+
+            <!--<Button-->
+                <!--android:id="@+id/tv_share_app_to_qq"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:drawablePadding="5dp"-->
+                <!--android:drawableTop="@mipmap/ic_more_qq"-->
+                <!--android:gravity="center_horizontal"-->
+                <!--android:padding="10dp"-->
+                <!--android:text="QQ"-->
+                <!--android:background="#F7F7F7"-->
+                <!--android:textColor="#999999"-->
+                <!--android:textSize="14sp"-->
+                <!--android:visibility="visible" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/tv_share_app_to_qzone"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:drawablePadding="5dp"-->
+                <!--android:drawableTop="@mipmap/ic_more_qzone"-->
+                <!--android:gravity="center_horizontal"-->
+                <!--android:padding="10dp"-->
+                <!--android:text="空间"-->
+                <!--android:background="#F7F7F7"-->
+                <!--android:textColor="#999999"-->
+                <!--android:textSize="14sp"-->
+                <!--android:visibility="visible" />-->
+            <Button
+                android:id="@+id/tv_share_app_to_qq"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text=""
+                android:background="#F7F7F7"
+                android:textColor="#999999"
+                android:textSize="14sp"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/tv_share_app_to_qzone"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text=""
+                android:background="#F7F7F7"
+                android:textColor="#999999"
+                android:textSize="14sp"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_marginTop="7.5dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="#ccc" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:color/white">
+
+            <Button
+                android:id="@+id/btn_pop_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="取消"
+                android:textColor="@color/text_color"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

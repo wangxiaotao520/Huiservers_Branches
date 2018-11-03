@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/lin_coupon40"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:gravity="center_vertical"
+                        android:text="您领取的到店优惠券"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/t_18sp" />
+
+                </LinearLayout>
+
+                <com.huacheng.huiservers.view.MyListView
+                    android:id="@+id/listview_myCoupon40"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:divider="@color/transparents"
+                    android:dividerHeight="8dp">
+
+                </com.huacheng.huiservers.view.MyListView>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/lin_unusedCoupon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:gravity="center_vertical"
+                        android:text="请领取以下到店优惠券"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/t_18sp" />
+
+                </LinearLayout>
+
+
+                <com.huacheng.huiservers.view.MyListView
+                    android:id="@+id/listview_unusedCoupon"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:divider="@color/transparents"
+                    android:dividerHeight="8dp">
+
+                </com.huacheng.huiservers.view.MyListView>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/no_data" />
+</LinearLayout>

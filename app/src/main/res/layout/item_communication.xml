@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/linear"
+    android:orientation="horizontal">
+
+    <com.huacheng.huiservers.view.CircularImage
+        android:id="@+id/img_info"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+         />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="社会认识分歧比较大，有的人认为的精华，有的人觉得是糟粕，官方也有矛盾的说法，自己把握好了，不要求能说服别人，主要是自己相信"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:textColor="@color/c_title"
+            android:textSize="@dimen/t_12sp"
+            />
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dp"
+                android:src="@drawable/icon_reply" />
+
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:id="@+id/tv_count_reply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="12"
+                android:textColor="@color/c_title3"
+                android:textSize="@dimen/t_12sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f0f0f0"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

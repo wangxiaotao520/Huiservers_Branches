@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+
+        <FrameLayout
+            android:id="@+id/fl_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"></FrameLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/black_fan_27"></View>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:background="#fff" />
+
+        </LinearLayout>
+
+
+        <RadioGroup
+            android:id="@+id/rg_content_fragment"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+
+            android:orientation="horizontal">
+
+            <com.huacheng.huiservers.view.MyRadioButton
+                android:id="@+id/rb_content_fragment_home"
+                style="@style/tab_style"
+                android:background="#fff"
+                android:checked="true"
+                android:drawableTop="@drawable/btn_home"
+                android:gravity="center"
+                android:paddingLeft="3dp"
+                android:text="首页"
+                android:textColor="@drawable/btn_textcolor_bottom_home" />
+
+            <com.huacheng.huiservers.view.MyRadioButton
+                android:id="@+id/rb_content_fragment_shop"
+                style="@style/tab_style"
+                android:background="#fff"
+                android:drawableTop="@drawable/btn_shop"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:text="商城"
+                android:textColor="@drawable/btn_textcolor_bottom_home" />
+
+         <!--   <com.huacheng.huiservers.view.MyRadioButton
+                android:id="@+id/rb_content_fragment_fabu"
+                style="@style/tab_style"
+                android:background="#fff"
+                android:drawableTop="@drawable/btn_fuwu"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:text="服务"
+                android:visibility="gone"
+                android:textColor="@drawable/btn_textcolor_bottom_home" />-->
+            <com.huacheng.huiservers.view.MyRadioButton
+                android:id="@+id/rb_content_fragment_service"
+                style="@style/tab_style"
+                android:background="#fff"
+                android:drawableTop="@drawable/btn_fuwu"
+                android:gravity="center"
+                android:paddingLeft="3dp"
+                android:text="服务"
+                android:textColor="@drawable/btn_textcolor_bottom_home" />
+
+            <com.huacheng.huiservers.view.MyRadioButton
+                android:id="@+id/rb_content_fragment_quanzi"
+                style="@style/tab_style"
+                android:background="#fff"
+                android:drawableTop="@drawable/btn_circle"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:text="邻里"
+                android:textColor="@drawable/btn_textcolor_bottom_home" />
+
+            <com.huacheng.huiservers.view.MyRadioButton
+                android:id="@+id/rb_content_fragment_people"
+                style="@style/tab_style"
+                android:background="#fff"
+                android:drawableTop="@drawable/btn_people"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:text="我的"
+                android:textColor="@drawable/btn_textcolor_bottom_home" />
+        </RadioGroup>
+
+    </RelativeLayout>
+
+</LinearLayout>

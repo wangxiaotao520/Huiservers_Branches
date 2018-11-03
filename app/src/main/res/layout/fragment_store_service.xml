@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windowbackground"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_top"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#EBEBEB"
+            android:orientation="horizontal">
+
+            <HorizontalScrollView
+                android:id="@+id/h_scrollview"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scrollbars="none"
+                >
+
+                <LinearLayout
+                    android:id="@+id/ll_tag_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" />
+
+            </HorizontalScrollView>
+            <FrameLayout
+                android:id="@+id/fl_tag_click"
+                android:layout_width="40dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_gravity="center"
+                    android:background="@mipmap/ic_arrow_down" />
+            </FrameLayout>
+
+        </LinearLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.huacheng.huiservers.widget.loadmorelistview.PagingListView
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:listSelector="@null"
+                android:divider="#00000000" />
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                layout="@layout/no_data" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_alltag"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <View
+            android:id="@+id/v_trans"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#4d7a7a7c" />
+
+        <com.zhy.view.flowlayout.TagFlowLayout
+            android:id="@+id/flowlayout_taglist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingBottom="0dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            app:max_select="1" />
+    </RelativeLayout>
+</RelativeLayout>

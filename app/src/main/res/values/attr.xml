@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomProgressBar">
+        <attr name="progressColor" format="color"/>
+        <attr name="progressDescColor" format="color"/>
+        <attr name="progressRadius" format="dimension"/>
+        <attr name="max" format="integer"/>
+        <attr name="progress" format="integer"/>
+        <attr name="borderWidth" format="dimension"/>
+        <attr name="progressDesc" format="string"/>
+        <attr name="isShowDesc" format="boolean"/>
+    </declare-styleable>
+    <attr name="rightPadding" format="dimension"></attr>
+
+    <declare-styleable name="SlidingMenu">
+        <attr name="rightPadding"></attr>
+    </declare-styleable>
+    <declare-styleable name="Dialog">
+        <attr name="DialogTitleAppearance" format="reference"/>
+        <attr name="DialogTitleText" format="reference|string"/>
+        <attr name="DialogSpotColor" format="reference|color"/>
+        <attr name="DialogSpotCount" format="integer"/>
+    </declare-styleable>
+    <declare-styleable name="scrollText">
+        <attr name="animationDuration" format="integer"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="ColorTrackView">
+        <attr name="ctvText" format="string"/>
+        <attr name="ctvText_size" format="dimension"/>
+        <attr name="ctvText_origin_color" format="color"/>
+        <attr name="ctvText_change_color" format="color"/>
+        <attr name="ctvProgress" format="float"/>
+        <attr name="ctvDirection" format="integer"/>
+    </declare-styleable>
+    <declare-styleable name="PullZoomLayout">
+        <attr name="pzHeader" format="reference"/>
+        <attr name="pzMain" format="reference"/>
+    </declare-styleable>
+    <declare-styleable name="HtmlTextView">
+        <attr name="loadingImg" format="reference"/>
+        <attr name="errorImg" format="reference"/>
+        <attr name="defaultWidth" format="reference"/>
+        <attr name="defaultHeight" format="reference"/>
+    </declare-styleable>
+    <attr name="clickableBackground" format="reference"/>
+    <attr name="main_bg" format="reference|color"/>
+    <attr name="white_bg" format="reference|color"/>
+    <attr name="font_color" format="reference|color"/>
+    <attr name="font_color2" format="reference|color"/>
+    <attr name="font_red" format="reference|color"/>
+    <attr name="isColorUi" format="boolean"/>
+    <attr name="divider_black" format="reference|color"/>
+    <attr name="divider_light_grey" format="reference|color"/>
+
+    <declare-styleable name="LoadingView">
+
+        <attr name="loadingText" format="string"/>
+        <attr name="loadingTextAppearance" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="MyRadioButton">
+        <attr name="drawableSize" format="dimension"/>
+        <attr name="drawableTop" format="reference"/>
+        <attr name="drawableLeft" format="reference"/>
+        <attr name="drawableRight" format="reference"/>
+        <attr name="drawableBottom" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="ExpandableTextViewAttr">
+        <!-- 允许显示最大行数 -->
+        <attr name="maxExpandLines" format="integer"></attr>
+        <!-- 动画执行时间 -->
+        <attr name="duration" format="integer"></attr>
+    </declare-styleable>
+    <!--1011**************************-->
+    <declare-styleable name="AndroidTagView">
+        <attr name="vertical_interval" format="dimension"/>
+        <attr name="horizontal_interval" format="dimension"/>
+
+        <attr name="container_border_width" format="dimension"/>
+        <attr name="container_border_radius" format="dimension"/>
+        <attr name="container_border_color" format="color"/>
+        <attr name="container_background_color" format="color"/>
+        <attr name="container_enable_drag" format="boolean"/>
+        <attr name="container_drag_sensitivity" format="float"/>
+        <attr name="container_max_lines" format="integer"/>
+        <attr name="container_gravity" format="enum">
+            <enum name="left" value="3"/>
+            <enum name="center" value="17"/>
+            <enum name="right" value="5"/>
+        </attr>
+
+        <attr name="tag_border_width" format="dimension"/>
+        <attr name="tag_corner_radius" format="dimension"/>
+        <attr name="tag_horizontal_padding" format="dimension"/>
+        <attr name="tag_vertical_padding" format="dimension"/>
+        <attr name="tag_text_size" format="dimension"/>
+        <attr name="tag_bd_distance" format="dimension"/>
+        <attr name="tag_text_color" format="color"/>
+        <attr name="tag_border_color" format="color"/>
+        <attr name="tag_background_color" format="color"/>
+        <attr name="tag_max_length" format="integer"/>
+        <attr name="tag_clickable" format="boolean"/>
+        <attr name="tag_theme" format="enum">
+            <enum name="none" value="-1"/>
+            <enum name="random" value="0"/>
+            <enum name="pure_cyan" value="1"/>
+            <enum name="pure_teal" value="2"/>
+        </attr>
+        <attr name="tag_text_direction" format="enum">
+            <enum name="ltr" value="3"/>
+            <enum name="rtl" value="4"/>
+        </attr>
+
+        <attr name="tag_ripple_color" format="color"/>
+        <attr name="tag_ripple_alpha" format="integer"/>
+        <attr name="tag_ripple_duration" format="integer"/>
+
+        <attr name="tag_enable_cross" format="boolean"/>
+        <attr name="tag_cross_width" format="dimension"/>
+        <attr name="tag_cross_color" format="color"/>
+        <attr name="tag_cross_line_width" format="dimension"/>
+        <attr name="tag_cross_area_padding" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="PullScrollView">
+        <attr name="header" format="reference"/>
+        <attr name="headerHeight" format="dimension"/>
+        <attr name="headerVisibleHeight" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="RingsView">
+        <!--扩散圆颜色-->
+        <attr name="diffuse_color" format="color"/>
+        <!--中心圆颜色-->
+        <attr name="diffuse_coreColor" format="color"/>
+        <!--中心圆图片-->
+        <attr name="diffuse_coreImage" format="reference"/>
+        <!--中心圆半径-->
+        <attr name="diffuse_coreRadius" format="dimension"/>
+
+        <!--新增-->
+
+        <!--扩散圆是否为椭圆-->
+        <attr name="rings_isOval" format="boolean"/>
+        <!--扩散椭圆的矩形外接矩形的 高／宽-->
+        <attr name="rings_ovalScale" format="float"/>
+        <!--中心位置是否为椭圆-->
+        <attr name="rings_isCenterOval" format="boolean"/>
+        <!--中心椭圆的外接矩形的宽-->
+        <attr name="rings_centerOvalWidth" format="dimension"/>
+        <!--中心椭圆的外接矩形的高-->
+        <attr name="rings_centerOvalHeight" format="dimension"/>
+        <!--扩散圆的最大个数：扩散范围内可同时出现的最多圆数-->
+        <attr name="rings_num" format="integer"/>
+
+        <!--是否为圆环-->
+        <attr name="rings_isRing" format="boolean"/>
+        <!--圆环宽度-->
+        <attr name="rings_ringWidth" format="dimension"/>
+        <!--填充圆颜色：建议为屏幕背景色 默认为白色-->
+        <attr name="rings_spaceColor" format="color"/>
+
+    </declare-styleable>
+
+    <!--涟漪控件属性-->
+    <declare-styleable name="mRippleView">
+        <attr name="cColor" format="color"/>
+        <attr name="cSpeed" format="integer"/>
+        <attr name="cDensity" format="integer"/>
+        <attr name="cIsFill" format="boolean"/>
+        <attr name="cIsAlpha" format="boolean"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="WarpLinearLayout">
+        <attr name="grivate" format="enum"><!--对齐方式 !-->
+            <enum name="right" value="0"></enum>
+            <enum name="left" value="1"></enum>
+            <enum name="center" value="2"></enum>
+        </attr>
+        <attr name="horizontal_Space" format="dimension"></attr>
+        <attr name="vertical_Space" format="dimension"></attr>
+        <attr name="isFull" format="boolean"></attr>
+    </declare-styleable>
+
+    <!-- Defines the custom XML attributes supported for a HorizontalListView -->
+    <declare-styleable name="HorizontalListView0814">
+        <attr name="dividerWidth" format="dimension" />
+        <attr name="android:divider" />
+        <attr name="android:requiresFadingEdge" />
+        <attr name="android:fadingEdgeLength" />
+    </declare-styleable>
+</resources>

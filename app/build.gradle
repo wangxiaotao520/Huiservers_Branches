@@ -1,0 +1,233 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'com.neenbedankt.android-apt'
+//apply plugin: 'com.mob.sdk'
+android {
+    compileSdkVersion 26
+    buildToolsVersion '28.0.0'
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+
+    defaultConfig {
+        applicationId "com.huacheng.huiservers"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 23
+        versionName "4.1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            //选择要添加的对应 cpu 类型的 .so 库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : applicationId,
+                JPUSH_APPKEY : "b4fee000a6ee3079afc88ea2", //JPush 上注册的包名对应的 Appkey.
+                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+        ]
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    signingConfigs {
+
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+    repositories {
+        flatDir {
+            dirs 'libs', '../app/libs' //第一个libs是主项目的libs,其他module的libs路径需要用逗号隔开../module名/libs
+        }
+    }
+    sourceSets {
+        main {
+            assets.srcDirs = ['src/main/assets', 'src/main/assets/']
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+  /*  dexOptions  {
+        incremental true
+        javaMaxHeapSize "4g"
+        preDexLibraries = false
+    }*/
+    signingConfigs {
+        debug {
+            keyAlias 'huacheng'
+            keyPassword '123456'
+            storeFile file('keyStore')
+            storePassword '123456'
+        }
+    }
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "Huiserver-${variant.versionName}.apk"
+        }
+    }
+    compileOptions{
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+}
+//MobSDK {
+//    appKey "moba6b6c6d6"
+//    appSecret "b89d2427a3bc7ad1aea1e1e8c1d36bf3"
+//
+//    ShareSDK {
+//        //平台配置信息
+//        devInfo {
+////            SinaWeibo {
+////                id 1
+////                sortId 1
+////                appKey "568898243"
+////                appSecret "38a4f8204cc784f81f9f0daaf31e02e3"
+////                callbackUri "http://www.sharesdk.cn"
+////                shareByAppClient true
+////                enable true
+////            }
+////
+////
+////            QZone {
+////                id 3
+////                sortId 3
+////                appId "100371282"
+////                appKey "aed9b0303e3ed1e27bae87c33761161d"
+////                shareByAppClient true
+////                bypassApproval false
+////                enable true
+////            }
+//
+//            /* Wechat微信和WechatMoments微信朋友圈的appid是一样的；
+//
+//      注意：开发者不能用我们这两个平台的appid,否则分享不了
+//      微信测试的时候，微信测试需要先签名打包出apk,
+//      sample测试微信，要先签名打包，keystore在sample项目中，密码123456
+//
+//      BypassApproval是绕过审核的标记，设置为true后AppId将被忽略，故不经过
+//      审核的应用也可以执行分享，但是仅限于分享文字和图片，不能分享其他类型，
+//      默认值为false。此外，微信收藏不支持此字段。wx4868b35061f87885
+//      <!--要分享微信小应用程序时用userName,path-->*/
+//            Wechat {
+//                id 4
+//                sortId 4
+//                appId "wx4868b35061f87885"
+//                appSecret "64020361b8ec4c99936c0e3999a9f249"
+//                userName "gh_afb25ac019c9"
+//                path "pages/index/index.html?id=1"
+//                withShareTicket true
+//                miniprogramType 0
+//                bypassApproval false
+//                enable true
+//            }
+//
+//            WechatMoments {
+//                id 5
+//                sortId 5
+//                appId "wx4868b35061f87885"
+//                appSecret "64020361b8ec4c99936c0e3999a9f249"
+//                bypassApproval false
+//                enable true
+//            }
+//
+////            WechatFavorite {
+////                id 6
+////                sortId 6
+////                appId "wx4868b35061f87885"
+////                appSecret "64020361b8ec4c99936c0e3999a9f249"
+////                bypassApproval false
+////                enable true
+////            }
+////
+////            QQ {
+////                id 7
+////                sortId 7
+////                appId "100371282"
+////                appKey "aed9b0303e3ed1e27bae87c33761161d"
+////                shareByAppClient true
+////                bypassApproval false
+////                enable true
+////            }
+//
+//        }
+//    }
+//}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:3.0.1', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testImplementation 'junit:junit:4.12'
+
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    implementation 'com.zhy:percent-support-extends:1.1.1'
+
+    /*原来是26.0.0-alpha1'*/
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor  'com.jakewharton:butterknife-compiler:8.8.1'
+    implementation 'com.lzy.widget:imagepicker:0.5.4'
+    implementation 'com.xingliuhua:xlhratingbar_lib:1.0.1'
+    implementation(name: 'EAccount_SDK_Android_201708232115', ext: 'aar')
+
+    implementation 'com.jude:rollviewpager:1.4.6'
+
+
+    implementation 'com.yan:pullrefreshlayout:2.1.08'
+
+    implementation 'com.githang:status-bar-compat:0.5'
+
+    //卡片效果，支持无限循环
+    implementation 'com.crazysunj:cardslideview:1.2.1'
+    implementation(name: 'ajbDoorBellLib-2.2.0-release', ext: 'aar')
+    implementation files('libs/ajbOpendoor-data-release-2.2.0.jar')
+    implementation files('libs/ajbOpendoor-ble-release-2.2.0.jar')
+    implementation 'org.jsoup:jsoup:1.9.2'
+
+    //开场动画图片放大效果
+    implementation 'cn.carbs.android:AutoZoomInImageView:1.0.1'
+    implementation 'com.belerweb:pinyin4j:2.5.0'
+
+    //    compile 'com.zhy:base-adapter:2.0.1'
+    implementation 'com.tencent.bugly:crashreport:latest.release'
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+
+    //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.1.9
+
+    // compile 'com.tencent.bugly:nativecrashreport:latest.release' //其中latest.release指代最新Bugly NDK版本号，也可以指定明确的版本号，例如3.0
+
+    // compile project(':servicelibrary')
+    implementation  project(':libraryservice')
+    implementation 'com.android.support:multidex:1.0.0'
+    implementation 'com.google.zxing:core:3.2.1'
+
+    //zxing核心依赖
+    implementation 'com.journeyapps:zxing-android-embedded:3.3.0'
+
+    //生成二维码依赖
+
+    //高德地图
+    implementation 'com.amap.api:location:latest.integration'
+    implementation 'com.contrarywind:Android-PickerView:4.1.6'
+
+    // compile files('libs/ShareSDK-Core-3.2.1.jar')
+    implementation  project(':base-adapter-library')
+    implementation  project(':baseadapter-recyclerview')
+    implementation  project(':library-luban')
+    implementation 'cn.jiguang.sdk:jpush:3.1.5'  // 此处以JPush 3.1.5 版本为例。
+    implementation 'cn.jiguang.sdk:jcore:1.2.3'  // 此处以JCore 1.2.3 版本为例。
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.12'
+}

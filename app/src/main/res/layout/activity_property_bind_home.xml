@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include layout="@layout/titlebar_center" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/windowbackground">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_community"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@color/white">
+                <TextView
+                    android:id="@+id/tv_community"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:layout_marginLeft="12dp"
+                    android:textSize="15sp"
+                    android:text=""
+                    android:hint="请选择小区"
+                    android:textColorHint="@color/text_color_hint"
+                    android:textColor="@color/text_color" />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/jiantou_you"
+                    android:layout_marginRight="16dp"
+                    android:layout_gravity="center_vertical" />
+            </LinearLayout>
+            <!--住户类型-->
+
+            <LinearLayout
+                android:id="@+id/ll_user_cate"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:background="@color/white">
+                <TextView
+                    android:id="@+id/tv_user_cate"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:layout_marginLeft="12dp"
+                    android:textSize="15sp"
+                    android:hint="请选择住户类型"
+                    android:textColorHint="@color/text_color_hint"
+                    android:text=""
+                    android:textColor="#555555" />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/jiantou_you"
+                    android:layout_marginRight="16dp"
+                    android:layout_gravity="center_vertical" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <!--商户编号-->
+                <LinearLayout
+                    android:id="@+id/ll_shop_cotainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/ll_shop"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal"
+                        android:background="@color/white">
+                        <TextView
+                            android:id="@+id/tv_shop_num"
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:layout_marginLeft="12dp"
+                            android:textSize="15sp"
+                            android:hint="请选择商户编号"
+                            android:textColorHint="@color/text_color_hint"
+                            android:text=""
+                            android:textColor="#555555" />
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/jiantou_you"
+                            android:layout_marginRight="16dp"
+                            android:layout_gravity="center_vertical" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--住宅 公寓-->
+                <LinearLayout
+                    android:id="@+id/ll_person_cotainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/ll_floor"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/white">
+                        <TextView
+                            android:id="@+id/tv_floor"
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:layout_marginLeft="12dp"
+                            android:textSize="15sp"
+                            android:hint="请选择楼号"
+                            android:textColorHint="@color/text_color_hint"
+                            android:text=""
+                            android:textColor="#555555" />
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/jiantou_you"
+                            android:layout_marginRight="16dp"
+                            android:layout_gravity="center_vertical" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_unit"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:background="@color/white">
+                        <TextView
+                            android:id="@+id/tv_unit"
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:layout_marginLeft="12dp"
+                            android:textSize="15sp"
+                            android:hint="请选择单元号"
+                            android:textColorHint="@color/text_color_hint"
+                            android:text=""
+                            android:textColor="#555555" />
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/jiantou_you"
+                            android:layout_marginRight="16dp"
+                            android:layout_gravity="center_vertical" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_room"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:background="@color/white">
+                        <TextView
+                            android:id="@+id/tv_room"
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:layout_marginLeft="12dp"
+                            android:textSize="15sp"
+                            android:hint="请选择房间号"
+                            android:textColorHint="@color/text_color_hint"
+                            android:text=""
+                            android:textColor="#555555" />
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/jiantou_you"
+                            android:layout_marginRight="16dp"
+                            android:layout_gravity="center_vertical" />
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+            <LinearLayout
+                android:id="@+id/ll_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:background="@color/white">
+                <EditText
+                    android:id="@+id/et_verifyID"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="12dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="请输入业主姓名或手机号"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:text=""
+                    android:textColor="@color/gray_55"
+                    android:textColorHint="@color/gray_a2"
+                    android:textSize="@dimen/t_15sp"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:id="@+id/lin_btn"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="@dimen/margin_40"
+        android:layout_marginRight="@dimen/margin_40"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bg_btn_orange"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txt_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textStyle="normal"
+            android:textColorHint="@color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.huacheng.libraryservice.widget.FunctionAdvertise
+            android:id="@+id/fc_ads"
+            android:layout_width="match_parent"
+            android:layout_height="175dp"
+            android:background="@color/windowbackground" />
+
+        <!--为了防止下拉刷新失效，加了1dp View-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white"></View>
+
+
+    </LinearLayout>
+
+</LinearLayout>

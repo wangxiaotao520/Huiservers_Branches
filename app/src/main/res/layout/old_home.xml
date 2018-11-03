@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/all_gray"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar_center" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/margin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.huacheng.huiservers.view.ImageCycleView
+                        android:id="@+id/ad_view"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/iv_ad_view"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ly_fengcai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/all_gray"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/margin"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/margin"
+                    android:paddingLeft="@dimen/margin_15"
+                    android:paddingRight="@dimen/margin_15"
+                    android:paddingTop="@dimen/margin_5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="老年风采"
+                        android:textColor="@color/orange_jain"
+                        android:textSize="@dimen/t_18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_oldQ_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="更多"
+                        android:textColor="@color/black_jain_87"
+                        android:textSize="@dimen/t_16sp" />
+
+                </RelativeLayout>
+
+
+                <com.huacheng.huiservers.view.MyListView
+                    android:id="@+id/list_quanzi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_15"
+                    android:layout_marginRight="@dimen/margin_15"
+                    android:divider="@null"></com.huacheng.huiservers.view.MyListView>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin"
+                android:background="@color/all_gray" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@color/all_gray"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                android:paddingLeft="@dimen/card_padding"
+                android:paddingRight="@dimen/card_padding" />
+
+
+            <LinearLayout
+                android:id="@+id/ly_chanpin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/all_gray"
+                    android:paddingLeft="@dimen/margin_15"
+                    android:paddingRight="@dimen/margin_15">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="老年产品"
+                        android:textColor="@color/orange_jain"
+                        android:textSize="@dimen/t_18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_oldShop_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="更多"
+                        android:textColor="@color/black_jain_87"
+                        android:textSize="@dimen/t_16sp" />
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/all_gray"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_15"
+                        android:layout_marginRight="@dimen/margin_15" />
+
+                    <include layout="@layout/no_data" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

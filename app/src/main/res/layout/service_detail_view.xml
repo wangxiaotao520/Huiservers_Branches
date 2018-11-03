@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:fresco="http://schemas.android.com/apk/res-auto"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="@dimen/margin"
+              android:orientation="vertical">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/iv_cardView_popular"
+        android:layout_width="242dp"
+        android:layout_height="114dp"
+        android:layout_marginRight="@dimen/margin"
+        fresco:placeholderImage="@drawable/ic_goods_bg"
+        fresco:placeholderImageScaleType="centerCrop"
+        fresco:roundedCornerRadius="15dp"
+        />
+
+    <LinearLayout
+        android:layout_width="242dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_titleName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="厨房地漏疏通机器厕所通下水道厨房地漏疏通机器厕所通下水道"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/t_12sp"/>
+
+        <TextView
+            android:id="@+id/tv_titleprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin"
+            android:singleLine="true"
+            android:text="0.00"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/t_12sp"/>
+    </LinearLayout>
+</LinearLayout>
+

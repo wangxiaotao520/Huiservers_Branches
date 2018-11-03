@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_15"
+        android:layout_marginRight="@dimen/margin_15"
+        android:orientation="vertical">
+
+        <com.huacheng.huiservers.view.MyListView
+            android:id="@+id/mlv_more_service"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:divider="@null"
+            android:fastScrollEnabled="false"
+            android:listSelector="@android:color/transparent"
+            android:smoothScrollbar="true">
+
+        </com.huacheng.huiservers.view.MyListView>
+
+
+        <LinearLayout
+            android:id="@+id/lin_btn_more_service"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_15">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="查看更多"
+                android:textColor="@color/black"
+                android:textSize="@dimen/t_13sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:src="@mipmap/ic_round_arrow" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

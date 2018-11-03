@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:xlhRatingBar="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <include
+        layout="@layout/titlebar_center" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <FrameLayout
+                android:id="@+id/fl_icon_container"
+                android:layout_marginTop="17dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp">
+
+                <ImageView
+                    android:id="@+id/iv_cancel_reason"
+                    android:layout_width="78dp"
+                    android:layout_height="30dp"
+                    android:background="@mipmap/ic_cancel_order"
+                    android:visibility="gone" />
+                <ImageView
+                    android:id="@+id/iv_jubao"
+                    android:layout_width="78dp"
+                    android:layout_height="30dp"
+                    android:background="@mipmap/ic_jubao"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/ll_pingjia_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+                    <ImageView
+                        android:layout_width="78dp"
+                        android:layout_height="30dp"
+                        android:background="@mipmap/ic_order_pingjia" />
+                    <com.example.xlhratingbar_lib.XLHRatingBar
+                        android:id="@+id/ratingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        xlhRatingBar:canEdit="true"
+                        xlhRatingBar:countSelected="3"
+                        xlhRatingBar:differentSize="false"
+                        xlhRatingBar:dividerWidth="10dp"
+                        xlhRatingBar:starCount="5"
+                        xlhRatingBar:stateResId="@drawable/layer_rating_bar"
+                        android:layout_marginLeft="20dp"
+                        xlhRatingBar:widthAndHeight="20dp" />
+
+                    <TextView
+                        android:id="@+id/tv_pingjia_intro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_color"
+                        android:textSize="14sp"
+                        android:layout_marginLeft="20dp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:text="" />
+
+                </LinearLayout>
+            </FrameLayout>
+            <com.huacheng.huiservers.view.MyListView
+                android:id="@+id/list_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:scrollbars="none"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_other_icon"
+                android:layout_width="78dp"
+                android:layout_height="30dp"
+                android:background="@mipmap/ic_order_other"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:visibility="gone" />
+            <EditText
+                android:id="@+id/et_live_content"
+                android:layout_width="match_parent"
+                android:layout_height="124dp"
+                android:layout_marginTop="12dp"
+                android:padding="10dp"
+                android:textSize="14sp"
+                android:textColor="@color/text_color"
+                android:textColorHint="#929292"
+                android:background="@drawable/allshape_greyf2"
+                android:hint="说说你的想法吧"
+                android:layout_marginLeft="15dp"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:layout_marginRight="15dp"
+                android:maxLength="150"
+                android:gravity="top"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:id="@+id/tv_text_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textSize="12sp"
+                    android:textColor="#929292"
+                    android:text="0/150"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp" />
+                
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_no_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="15dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_check"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:background="@mipmap/ic_order_detail_uncheck" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_color"
+                    android:layout_marginLeft="10dp"
+                    android:text="匿名"
+                    android:layout_marginRight="15dp" />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="12sp"
+                    android:textColor="#929292"
+                    android:text="您写的评价会以匿名的方式展示"
+                    android:layout_marginRight="15dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/windowbackground"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_btn"
+            android:layout_width="150dp"
+            android:layout_height="@dimen/margin_40"
+            android:background="@drawable/bg_btn_orange"
+            android:gravity="center"
+            android:text="发布评价"
+            android:textColor="@color/white"
+            android:textSize="@dimen/t_15sp"/>
+    </LinearLayout>
+</LinearLayout>

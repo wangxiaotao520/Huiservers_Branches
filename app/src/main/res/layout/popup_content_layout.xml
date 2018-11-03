@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/button_normal_bg"
+    android:orientation="vertical"
+    android:padding="1dp">
+
+    <LinearLayout
+        android:layout_width="@dimen/popupwindow_content_width"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/lin_menu_item1"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:paddingLeft="10dp"
+            android:gravity="center_vertical"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/menu_item1_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的邻里"
+                android:paddingRight="5dp"
+                android:textColor="@color/black_jain_87"
+                android:textSize="@dimen/t_14sp" />
+
+            <TextView
+                android:id="@+id/menu_item1_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/t_14sp" />
+        </LinearLayout>
+
+
+        <View style="@style/menu_item_divider_style" />
+
+        <TextView
+            android:id="@+id/menu_item2"
+            android:paddingLeft="10dp"
+            style="@style/menu_item_text_style"
+            android:text="发帖"
+
+            android:textSize="@dimen/t_14sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

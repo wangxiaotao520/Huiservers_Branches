@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rel_release_title"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:elevation="4dp"
+        android:paddingBottom="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="15dp"
+        android:paddingTop="8dp">
+
+        <TextView
+            android:id="@+id/tv_service_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="服务"
+            android:textColor="@color/black_jain_87"
+            android:textSize="@dimen/t_20sp" />
+
+        <LinearLayout
+            android:id="@+id/linear_service_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/tv_community_service"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/icon_center_fuwu" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="58dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
+
+            <com.huacheng.huiservers.view.MyListView
+                android:id="@+id/service_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/view_background_color"
+                android:dividerHeight="1dp" />
+
+            <include layout="@layout/no_data" />
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>

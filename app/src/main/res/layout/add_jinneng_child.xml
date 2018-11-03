@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <!-- <RelativeLayout
+        android:id="@+id/rel"
+        android:layout_width="fill_parent"
+        android:layout_height="25dp"
+        android:background="@color/white"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:text="家电维修"
+            android:textColor="@color/gray2"
+            android:textSize="@dimen/t_14sp" />
+
+        <CheckBox
+            android:id="@+id/check"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="@dimen/margin"
+            android:text="" />
+    </RelativeLayout> -->
+
+    <RadioButton
+        android:id="@+id/rb"
+        style="@style/RadioButton"
+        android:text="dadsd"
+        android:textSize="@dimen/t_14sp"
+        android:textColor="@color/gray2" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/view_background" />
+
+</LinearLayout>

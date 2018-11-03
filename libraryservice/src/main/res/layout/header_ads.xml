@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+        <com.huacheng.libraryservice.widget.HackyViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </com.huacheng.libraryservice.widget.HackyViewPager>
+
+        <!--广告小圆点-->
+        <LinearLayout
+            android:id="@+id/ll_find_ads_dot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:orientation="horizontal" />
+
+</RelativeLayout>

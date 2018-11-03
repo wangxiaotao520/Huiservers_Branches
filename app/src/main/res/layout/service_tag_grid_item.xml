@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <TextView
+        android:id="@+id/tv_grid_tag_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color"
+        android:textSize="14sp"
+        android:background="#E3E3E3"
+        android:text="保洁"
+        android:ellipsize="end"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:singleLine="true"
+        android:gravity="center" />
+    <View
+        android:id="@+id/view_bottom_line"
+        android:layout_width="match_parent"
+        android:layout_height="1.5px"
+        android:background="@color/line" />
+</LinearLayout>

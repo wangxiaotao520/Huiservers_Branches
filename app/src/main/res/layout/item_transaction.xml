@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="0px"
+    app:cardMaxElevation="2px"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true"
+    >
+    <!--cardUseCompatPadding 设置阴影之后自动缩小布局大小-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/item_iv"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:scaleType="fitXY" />
+        <LinearLayout
+            android:layout_below="@+id/item_iv"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/c_title"
+                android:textSize="@dimen/t_14sp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="中华文化总得来说精华多还是糟粕多，欧美几乎从没学过中国的文化也能步入现代文明，现在研究传统文化还有意义吗" />
+
+
+        </LinearLayout>
+
+
+        <com.huacheng.huiservers.view.CircularImage
+            android:id="@+id/img_info"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="70dp"
+             />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

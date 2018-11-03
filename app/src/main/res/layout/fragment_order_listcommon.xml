@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/title"
+            >
+
+            <ListView
+                android:id="@+id/listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:divider="@null"
+                android:fastScrollEnabled="false"
+                android:listSelector="@android:color/transparent"
+                android:smoothScrollbar="true"/>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        <include layout="@layout/no_data"></include>
+
+        <!--  <FrameLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_alignParentBottom="true">
+
+              <ImageButton
+                  android:id="@+id/ib_back_top"
+                  android:layout_width="40dp"
+                  android:layout_height="40dp"
+                  android:layout_gravity="right"
+                  android:layout_marginBottom="28dp"
+                  android:layout_marginRight="14dp"
+                  android:background="@drawable/ic_back_top"
+                  android:visibility="gone"/>
+          </FrameLayout>-->
+    </RelativeLayout>
+
+</LinearLayout>

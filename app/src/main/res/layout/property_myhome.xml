@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/all_gray"
+              android:orientation="vertical">
+
+    <include layout="@layout/titlebar_center"></include>
+
+    <RelativeLayout
+        android:id="@+id/rel_selectaddress"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_50"
+        android:layout_marginTop="@dimen/margin"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/margin"
+        android:paddingRight="@dimen/margin">
+
+        <TextView
+            android:id="@+id/tv_house"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:hint="请选择房屋"
+            android:text=""
+            android:textColor="@color/gray_55"
+            android:textColorHint="@color/gray_a2"
+            android:textSize="@dimen/t_15sp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/margin_8">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right_grayblack"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_50"
+        android:layout_marginTop="@dimen/margin"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margin"
+        android:paddingRight="@dimen/margin">
+
+        <EditText
+            android:id="@+id/et_verifyID"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="请输入业主姓名或手机号"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:text=""
+            android:textColor="@color/gray_55"
+            android:textColorHint="@color/gray_a2"
+            android:textSize="@dimen/t_15sp"/>
+
+        <TextView
+            android:id="@+id/tv_btn_verify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/allshape_orange_2"
+            android:paddingBottom="3dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="3dp"
+            android:text="验证"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lin_errorinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_15"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="@dimen/margin_20"
+            android:layout_height="@dimen/margin_20"
+            android:layout_marginRight="@dimen/margin_5"
+            android:src="@drawable/ic_error_info"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="您输入的验证信息错误，请重新输入"
+            android:textColor="#D92913"/>
+
+    </LinearLayout>
+
+</LinearLayout>

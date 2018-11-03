@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/lin_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/lin_hotTag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="15dp">
+
+                    <View
+                        android:layout_width="@dimen/margin_3"
+                        android:layout_height="@dimen/margin_15"
+                        android:layout_marginRight="@dimen/margin_13"
+                        android:background="#7f7f7f"></View>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="热门"
+                        android:textColor="#a6a6a6"
+                        android:textSize="@dimen/t_14sp" />
+
+                </LinearLayout>
+
+                <com.huacheng.huiservers.view.FlowLayout
+                    android:id="@+id/flowlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp">
+
+                </com.huacheng.huiservers.view.FlowLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/search_history_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="15dp">
+
+                        <View
+                            android:layout_width="@dimen/margin_3"
+                            android:layout_height="@dimen/margin_15"
+                            android:layout_marginRight="@dimen/margin_13"
+                            android:background="#7f7f7f"></View>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="历史"
+                            android:textColor="#a6a6a6"
+                            android:textSize="@dimen/t_14sp" />
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/tv_clear_history"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:paddingLeft="@dimen/margin_15"
+                        android:paddingRight="@dimen/margin_15"
+                        android:paddingTop="@dimen/margin_15"
+                        android:text="清除历史"
+                        android:textSize="@dimen/t_14sp" />
+
+                </RelativeLayout>
+
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <com.huacheng.huiservers.view.MyListView
+                            android:id="@+id/search_history_lv"
+                            style="@style/common_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:divider="@color/all_gray"
+                            android:dividerHeight="1dp"
+                            android:listSelector="@drawable/list_item_selector"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp"></com.huacheng.huiservers.view.MyListView>
+
+
+                    </LinearLayout>
+
+                </ScrollView>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <include layout="@layout/no_data"></include>
+
+    </RelativeLayout>
+
+</LinearLayout>

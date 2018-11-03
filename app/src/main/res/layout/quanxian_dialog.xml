@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_xu"
+                    android:layerType="software"
+                    android:textColor="@color/gray4"
+                    />
+
+                <TextView
+                    android:layout_width="7dp"
+                    android:layout_height="7dp"
+                    android:background="@drawable/circle_gray"
+                    android:textColor="@color/gray2"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:text="权限说明"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/t_18sp"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="7dp"
+                    android:layout_height="7dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/circle_gray"
+                    android:gravity="center"
+                    android:textColor="@color/gray2"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/shape_xu"
+                    android:gravity="center"
+                    android:layerType="software"
+                    android:textColor="@color/gray4"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_marginTop="@dimen/margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="3dp"
+            android:text="
+1.所有家人都拥有权限邀请其他人加入\n
+2.租客只能邀请租客加入\n
+3.租客只能由户主和家人邀请加入\n\n
+4.所有人不能删除户主权限\n
+5.户主能删除所有人权限\n
+6.非户主家人只能删除非户主家人和租客\n\n
+7.租客只显示被邀请入驻的房间"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lin_btn"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:background="@color/orange5"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="@dimen/t_18sp"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

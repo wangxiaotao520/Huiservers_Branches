@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:descendantFocusability="afterDescendants"
+              android:focusable="false"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/lin_onclick_child"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/view_background"/>
+
+        <RelativeLayout
+            android:id="@+id/rel_coupon"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin">
+
+            <TextView
+                android:id="@+id/txt_baoguo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text=""
+                android:textColor="@color/c_title"
+                android:textSize="@dimen/t_14sp"/>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:layout_toRightOf="@id/txt_baoguo"
+                android:background="@drawable/allshape_zorange_k"
+                android:focusable="false"
+                android:gravity="center"
+                android:padding="1dp"
+                android:text="当日到"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/t_10sp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="运费：¥5.00"
+                android:textColor="@color/gray4"
+                android:textSize="@dimen/t_14sp"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/view_background"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/rel_see"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_5">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3.5"
+                    android:orientation="horizontal">
+
+                    <com.huacheng.huiservers.view.HorizontalListView
+                        android:id="@+id/hor_scroll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp">
+                    </com.huacheng.huiservers.view.HorizontalListView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lin_onclick"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.5"
+                    android:gravity="center_vertical|right"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txt_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/c_title"
+                            android:textSize="@dimen/t_14sp"/>
+
+                        <TextView
+                            android:id="@+id/txt_danprice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_5"
+                            android:text=""
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/t_18sp"/>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_15"
+                        android:layout_marginRight="@dimen/margin_5"
+                        android:background="@drawable/jiantou_you"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/edt_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:focusable="false"
+        android:gravity="center_vertical"
+        android:hint="给商家留言"
+        android:padding="@dimen/margin"
+        android:textColor="@color/grey"
+        android:textColorHint="@color/grey96"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:textSize="@dimen/t_14sp"
+        android:visibility="gone"/>
+
+
+    <LinearLayout
+        android:id="@+id/lin_all"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin"
+        android:gravity="right"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:gravity="center"
+            android:padding="@dimen/margin_5"
+            android:text="是否自提"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/t_14sp"/>
+
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginRight="@dimen/margin"
+            android:gravity="right">
+
+            <com.huacheng.huiservers.view.SwitchButton
+                android:id="@+id/btn_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:sb_checked="false"
+                app:sb_show_indicator="false"/>
+
+        </LinearLayout>
+        <!--
+                <RadioGroup
+                    android:id="@+id/rg_colleague"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radio1"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/txt_back_bottom"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:padding="@dimen/margin_5"
+                        android:text="送货上门"
+                        android:textColor="@drawable/txt_color_bottom"
+                        android:textSize="@dimen/t_14sp"/>
+
+                    <RadioButton
+                        android:id="@+id/radio2"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/margin_5"
+                        android:layout_marginRight="@dimen/margin_5"
+                        android:background="@drawable/txt_back_bottom"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:padding="@dimen/margin_5"
+                        android:text="自提"
+                        android:textColor="@drawable/txt_color_bottom"
+                        android:textSize="@dimen/t_14sp"/>
+                </RadioGroup>-->
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/margin"
+        android:background="@color/all_gray"/>
+
+</LinearLayout>

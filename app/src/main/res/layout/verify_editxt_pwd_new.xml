@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/view_background_color"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar_center" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:visibility="gone"
+        android:paddingRight="15dp"
+        android:paddingTop="13dp">
+
+        <EditText
+            android:id="@+id/et_old_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="left"
+            android:inputType="textPassword"
+            android:hint="输入旧密码"
+            android:paddingBottom="13dp"
+            android:textSize="16sp" />
+
+        <View
+            android:id="@+id/v_head_line"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/graynew4" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="13dp">
+
+        <EditText
+            android:id="@+id/et_new_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="left"
+            android:hint="设置新密码"
+            android:inputType="textPassword"
+            android:drawableRight="@drawable/closef1"
+            android:paddingBottom="13dp"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/graynew4" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="13dp">
+
+        <EditText
+            android:id="@+id/et_enter_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="left"
+            android:inputType="textPassword"
+            android:hint="确认新密码"
+            android:drawableRight="@drawable/closef1"
+            android:paddingBottom="13dp"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/graynew4" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_flag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingTop="10dp"
+        android:text="密码至少要6位，且包含数字和字母"
+        android:textColor="@color/gray"
+        android:textSize="14sp" />
+
+
+</LinearLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:zhy="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_service_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_15"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <!--fresco:placeholderImage="@drawable/icon_girdview"-->
+        <!--fresco:roundingBorderColor="@color/line_f2"
+        fresco:roundingBorderWidth="1dp"-->
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sdv_service_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            fresco:placeholderImage="@drawable/icon_girdview"
+            fresco:roundedCornerRadius="15dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_serviceName"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/margin"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/t_15sp" />
+
+            <TextView
+                android:id="@+id/tv_servicePrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/margin"
+                android:text=""
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/t_14sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/lin_bottom_tags"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/margin_5"
+            android:orientation="horizontal">
+
+            <!--fresco:roundingBorderColor="@color/line_f2"
+            fresco:roundingBorderWidth="1dp"-->
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/sdv_servicelogo"
+                android:layout_width="@dimen/margin_20"
+                android:layout_height="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_3"
+                fresco:placeholderImage="@drawable/facehead1"
+                fresco:roundAsCircle="true" />
+
+            <TextView
+                android:id="@+id/tv_organizationName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginTop="6dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/grey96"
+                android:textSize="11sp" />
+
+            <com.zhy.view.flowlayout.TagFlowLayout
+                android:id="@+id/flowlayout_service"
+                android:layout_width="fill_parent"
+                android:layout_height="23dp"
+                android:layout_marginLeft="@dimen/margin"
+                zhy:max_select="-1">
+
+            </com.zhy.view.flowlayout.TagFlowLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/margin_15"
+            android:background="@color/line_f7" />
+    </LinearLayout>
+
+</LinearLayout>

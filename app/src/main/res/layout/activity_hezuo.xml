@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:backgroundTint="#a3a3a3"
+              android:clipToPadding="false"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <include layout="@layout/titlebar_center"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="29dp"
+        android:text="请告诉我们您的联系方式"
+        android:textColor="#000000"
+        android:textSize="15sp"/>
+
+    <EditText
+        android:textColor="@color/text_color"
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginTop="14dp"
+        android:background="#fff"
+        android:hint="输入您的姓名"
+        android:paddingLeft="11dp"
+        android:paddingRight="11dp"
+        android:singleLine="true"
+        android:textColorHint="@color/grey96"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:textSize="@dimen/t_14sp"/>
+
+    <EditText
+        android:id="@+id/et_phone"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginTop="9dp"
+        android:background="#fff"
+        android:textColor="@color/text_color"
+        android:hint="手机号"
+        android:inputType="number"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:paddingLeft="11dp"
+        android:paddingRight="11dp"
+        android:singleLine="true"
+        android:textColorHint="@color/grey96"
+        android:textSize="@dimen/t_14sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="29dp"
+        android:text="请告诉我们您的合作意向，稍后有专人与您联系"
+        android:textColor="#000000"
+        android:textSize="15sp"/>
+
+
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginTop="14dp"
+        android:background="#fff"
+        android:gravity="top"
+        android:hint="写在这里..."
+        android:paddingLeft="11dp"
+        android:paddingRight="11dp"
+        android:paddingTop="20dp"
+        android:textColor="@color/text_color"
+        android:textColorHint="@color/grey96"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:textSize="@dimen/t_14sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="17dp"
+        android:text="您可以致电客服中心: 400-6535-355"
+        android:textColor="#80333333"
+        android:textSize="15sp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rel_ti"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ff6a24"
+                android:gravity="center"
+                android:padding="@dimen/margin_13"
+                android:text="提交"
+                android:textColor="#fff"
+                android:textSize="@dimen/t_14sp"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

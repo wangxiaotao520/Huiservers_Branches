@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_nsm"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar_center" />
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginRight="18dp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:id="@+id/lin_dianqi"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin"
+                        android:gravity="left"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/margin"
+                        android:paddingTop="@dimen/margin">
+
+                        <TextView
+                            android:id="@+id/txt_two"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:textColor="@color/c_title"
+                            android:textSize="@dimen/t_16sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left|center"
+                            android:background="@drawable/jiantou_down_red" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin"
+                        android:layout_marginTop="@dimen/margin"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/edt_content"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:ems="10"
+                            android:gravity="top"
+                            android:hint="这里填写维修的其他要求"
+                            android:minLines="5"
+                            android:textColorHint="#CFCFCF"
+                            android:textColor="@color/text_color"
+                            android:textCursorDrawable="@drawable/color_cursor"
+                            android:textSize="@dimen/t_16sp"/>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_5"
+                            android:orientation="horizontal">
+
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/recyclerView"
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:choiceMode="singleChoice"
+                                android:divider="@null"
+                                android:fadingEdge="none"
+                                android:horizontalSpacing="3dp"
+                                android:listSelector="@android:color/transparent"
+                                android:scrollbarStyle="outsideOverlay"
+                                tools:listitem="@layout/list_item_image" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/view_background" />
+
+                    <LinearLayout
+                        android:id="@+id/lin_guzhang"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp">
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_3"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:maxLines="2"
+                            android:text="是否需要替换部件"
+                            android:textColor="@color/c_title"
+                            android:textSize="@dimen/t_16sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right">
+
+                            <com.huacheng.huiservers.view.SwitchButton
+                                android:id="@+id/switch_status"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:sb_checked="true"
+                                app:sb_show_indicator="false" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/view_background" />
+
+                    <RelativeLayout
+                        android:id="@+id/rel_time_segment"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/margin"
+                        android:paddingTop="@dimen/margin">
+
+                        <TextView
+                            android:id="@+id/txt_start"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_3"
+                            android:background="@null"
+                            android:text="希望上门时段"
+                            android:textColor="@color/c_title"
+                            android:textSize="@dimen/t_16sp" />
+
+                        <LinearLayout
+                            android:id="@+id/linear_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_door_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:hint="请选择"
+                                android:textColor="@color/c_title"
+                                android:textSize="@dimen/t_16sp" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginRight="3dp"
+                                android:background="@drawable/icon61" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/view_background" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_address"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/margin_15"
+                            android:paddingRight="@dimen/margin"
+                            android:paddingTop="@dimen/margin_15">
+
+                            <LinearLayout
+                                android:id="@+id/lin_yesaddress"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:visibility="gone">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="4"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/txt_name"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text=""
+                                            android:textColor="@color/c_title"
+                                            android:textSize="@dimen/t_16sp" />
+
+                                        <TextView
+                                            android:id="@+id/txt_mobile"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="@dimen/margin_20"
+                                            android:text=""
+                                            android:textColor="@color/c_title"
+                                            android:textSize="@dimen/t_16sp" />
+
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:id="@+id/txt_address"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/margin_5"
+                                        android:text=""
+                                        android:textColor="@color/c_title"
+                                        android:textSize="@dimen/t_16sp" />
+
+                                </LinearLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="fill_parent"
+                                    android:layout_weight="1">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerVertical="true"
+                                        android:src="@drawable/jiantou_you" />
+                                </RelativeLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/lin_noadress"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:orientation="horizontal"
+                                android:paddingBottom="@dimen/margin"
+                                android:paddingTop="@dimen/margin"
+                                android:visibility="visible">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:background="@drawable/iv_address" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:text="请选择一个地址"
+                                    android:textColor="@color/c_title"
+                                    android:textSize="@dimen/t_16sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/view_background" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

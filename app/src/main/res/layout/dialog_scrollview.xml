@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="200dp"
+              android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/white"
+        android:fillViewport="true"
+        android:paddingBottom="@dimen/margin"
+        android:paddingLeft="@dimen/margin"
+        android:paddingRight="@dimen/margin"
+      >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="2dp"
+                android:text="\n  \t\t1.增加【小慧推荐】栏目，提供给您的一种新的生活方式、生活态度，发现平凡生活中的小美好。
+ \n  \t\t 2.增加【服务】栏目，针对年底家政热，社区慧生活整合了大量榆次家政市场服务商，为业主带来价格最低，质量最高的家政服务。
+ \n  \t\t 3.增加【粮油水】商品，本着做一个有态度、有温度的社区服务提供商，提供最优惠、最安全、最放心的大品牌粮油水商品，并且提供免费上门送货服务。
+ \n  \t\t 4.优化【物业缴费】功能，更简单、快速的实现在家缴纳物业费。
+ \n  \t\t 5.优化【客服】功能，您在使用App过程中，遇到任何问题，可咨询客服小慧来
+ \n  \t\t 6.解决【维修】功能已知BUG，为用户提供更加稳定的体验。
+ \n  \t\t 7.解决【圈子】功能已知BUG，为用户提供更加稳定的体验。
+ \n  \t\t 8.解决【商城】功能已知BUG，为用户提供更加稳定的体验。"
+                android:textColor="@color/black_jain_87"
+                android:textSize="@dimen/t_14sp"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
